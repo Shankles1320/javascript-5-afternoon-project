@@ -121,6 +121,6 @@ User.prototype.removeSavedPost = function(id) {
 // You will continue to use the constructor function you created in problem 5.
 // Write a prototype method for the User constructor function named changePostRating that will take in two number parameters. The first will be an id (a number) and the second will be the new rating (a number). Use the id to find the matching object in the savedPosts array. Once you find the matching object, update it's rating score with the new rating parameter.
 
-// User.prototype.changePostRating = funciton(id, newRating){
-//   findIndex(id)
-// }
+User.prototype.changePostRating = function(id, num) {
+	this.savedPosts.map((e) => (e.id === id ? (e.rating = num) : null));
+};
